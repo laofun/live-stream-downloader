@@ -22,6 +22,7 @@
       <input type="button" data-id="rename" value="Rename" disabled>
       <input type="button" data-id="copy" value="Copy">
       <input type="submit" value="Download">
+      <input type="button" data-id="send-aria2" value="Send to Aria2">
     </label>
   </template>
   <div id="intro">
@@ -56,6 +57,8 @@
     <input type="button" value="Remove Duplicates" id="remove-duplicates">
     <input type="button" value="Keep M3U8" id="keep-hls">
     &bull;
+    <input type="button" value="Send to Aria2-Manager" id="send-aria2-manager">
+    &bull;
     <input type="button" value="Download All" disabled id="download-all">
   </div>
   <footer>
@@ -84,6 +87,13 @@ Acceptable Keywords:
           <input type="checkbox" id="mime-watch">
           <label for="online-resolve-name">Try to Resolve Filename from Server</label>
           <input type="checkbox" id="online-resolve-name">
+          <span class="sep"></span>
+          <label for="send_to_aria2_manager">Send to Aria2-Manager</label>
+          <input type="checkbox" id="send_to_aria2_manager">
+          <label for="threads">Aria2 Threads (1-60)</label>
+          <input type="number" min="1" max="60" value="10" id="aria2_threads" title="Download jobs with multiple threads to increase speed">
+          <label for="aria2_manager_id">Aria2-Manager Extension ID</label>
+          <input type="text" id="aria2_manager_id" title="The ID of the Aria2-Manager extension">
           <span class="sep"></span>
           <label for="quality-selector">Show Quality Selector</label>
           <input type="radio" name="quality" checked id="quality-selector">
@@ -138,5 +148,6 @@ Acceptable Keywords:
   <script type="text/javascript" src="plugins/batch.js"></script>
   <script type="text/javascript" src="plugins/links.js"></script>
   <script type="text/javascript" src="plugins/mime.js"></script>
+  <script type="text/javascript" src="plugins/aria2_manager.js"></script>
 </body>
 </html>

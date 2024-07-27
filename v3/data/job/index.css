@@ -201,7 +201,7 @@ body:not([data-mode=empty]) #intro {
 }
 #hrefs {
   display: grid;
-  grid-template-columns: min-content min-content min-content repeat(2, min-content) 1fr repeat(3, min-content);
+  grid-template-columns: min-content min-content min-content repeat(2, min-content) 1fr repeat(4, min-content);
   grid-gap: 2px 10px;
   align-items: center;
   overflow: hidden;
